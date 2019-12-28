@@ -1,0 +1,8 @@
+---
+- hosts: master
+  remote_user: ansadmin
+  tasks:
+    - name: taking backup
+      command: touch /abc 
+      become: yes
+      become_method: sudo
